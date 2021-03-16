@@ -1,0 +1,64 @@
+<%- include ../partials/header.ejs %>
+  
+<%- include ../partials/main_navbar.ejs%>
+
+    <main class="container">
+    <!-- Message Area-->
+    <% if(messages.length > 0){ %>
+        <div class="alart alart-danger">
+            <%= messages %>
+        </div>
+    <% } %>
+    <div class="row">
+        <div class="offset-md-4 col-md-4">
+            <h1>Please Register</h1>
+            <form action="" method="POST" autocomplete="off">
+                <fieldset class="form-group">
+                    <lable for="username">Username: </lable>
+                    <input type="text" class="form-control"
+                    name="username"
+                    placeholder="Enter username"
+                    id="username"
+                    required
+                    autofocus>
+                </fieldset>
+                <fieldset class="form-group">
+                    <lable for="password">Password: </lable>
+                    <input type="password" class="form-control"
+                    name="password"
+                    placeholder="Enter Password"
+                    id="password"
+                    required>
+                </fieldset>
+                <fieldset class="form-group">
+                    <lable for="email">Email: </lable>
+                    <input type="email" class="form-control"
+                    name="email"
+                    placeholder="Enter Email address"
+                    id="email"
+                    required>
+                </fieldset>
+                <fieldset class="form-group">
+                    <lable for="displayName">DisplayName: </lable>
+                    <input type="text" class="form-control"
+                    name="displayName"
+                    placeholder="Enter Display Name"
+                    id="displayName"
+                    required>
+                </fieldset>
+                <fieldset class="form-group text-right">
+                    <input type="submit" class="btn btn-success" value="Register">
+                    <a href="/">
+                        <input type="button" class="btn btn-warning" value="cancel">
+                    </a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    </main>
+
+
+<%- include ../partials/bottom_navbar.ejs %>
+
+<%- include ../partials/footer.ejs %>

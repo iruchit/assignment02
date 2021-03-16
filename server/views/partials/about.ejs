@@ -1,0 +1,27 @@
+<br><br>
+<div class="container">
+  <div class="row">
+        <!--single row-->
+        <div class="col-sm-4">
+        <img src="./Assets/images/ruchit.jpg" style="width:235px; height:350px;" alt="Ruchit Patel">
+        </div>
+        <div class="col-sm-8">
+           <h3>My name is Ruchit Patel and studying at centennial college in software engineering technology (Advance Diploma).</h3>
+           <h3>I enjoy Web application developmant and working with c# language to make console and form based application.</h3>
+           <h3>I have started learning this program in September 2019, and the expected time of course completion is April of 2023</h3>
+           <br>
+           <h3>Click on the below button for my resume.</h3>
+           <% if(typeof displayName == 'string' && displayName) { %>
+
+            <a href="/Assets/documents/ruchit.pdf" target="_blank" ><button type="button" class="btn btn-outline-dark">Resume</button></a>
+        
+        <% } else { %>
+        
+          <p style="color:red"><a href="" ><button type="button" class="btn btn-outline-dark">Resume</button></a>
+            *please login</p>
+        
+        <% } %>
+         </div>
+  </div>
+</div>
+

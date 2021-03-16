@@ -1,0 +1,56 @@
+<%- include ../partials/header.ejs %>
+  
+<%- include ../partials/main_navbar.ejs%>
+<script>
+function upperCaseIt() {
+    var x = document.getElementById("nameTextField");
+    x.value = x.value.toLocaleUpperCase();
+}
+</script>
+<!-- Content for the Edit page-->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="POST" onSubmit="upperCaseIt()">
+                <div class="form-group">
+                    <label for="nameTextField">Contact Name</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    name="name"
+                    value="<%= contact.name %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numberTextField">Contact Number</label>
+                    <input type="number" class="form-control"
+                    id="numberTextField"
+                    name="number"
+                    value="<%= contact.number %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailTextField">Email Address</label>
+                    <input type="email" class="form-control"
+                    id="emailTextField"
+                    name="email"
+                    value="<%= contact.email %>"
+                    required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Edit</button>
+
+                <a href="/contact-list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<%- include ../partials/bottom_navbar.ejs %>
+
+<%- include ../partials/footer.ejs %>

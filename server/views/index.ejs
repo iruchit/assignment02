@@ -1,0 +1,27 @@
+
+<%- include partials/header.ejs %>
+  
+<%- include partials/main_navbar.ejs%>
+<br><br>
+    
+    <main class="container"  style="background-color:#e6f7ff;">
+          <% if(title=="Home"){ %>
+             <%- include  partials/home.ejs %>
+          <% } else if(title=="About"){ %>
+             <%- include  partials/about.ejs %>
+          <% } else if(title=="Projects"){%>
+             <%- include  partials/projects.ejs %>
+          <% } else if(title=="Services"){%>
+             <%- include  partials/services.ejs %>
+          <% } else if(title=="Contact"){%>
+             <%- include  partials/contact.ejs %>
+          <% } %>
+          <br><br>
+    </main>
+<%- include partials/bottom_navbar.ejs %>
+
+<%- include partials/footer.ejs %>
+   
+
+   
+
